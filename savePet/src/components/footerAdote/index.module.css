@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Lato:wght@700&display=swap');
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 250px;
+    background: linear-gradient(90deg, #2D6188 50%, #00E2CE 50%);
+
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+
+}
+
+.contado{
+    position: absolute;
+    margin-bottom: 256px;
+
+    width: 384px;
+    height: 60px;
+
+    background: #E6AD4A;
+    box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1);
+    
+}
+
+.contadoh{
+    text-align: center;
+    margin-top: 10px;
+}

@@ -1,5 +1,7 @@
 import './App.css'
 import logoPage from '../../assets/logoPage.svg'
+import { Link } from 'react-router-dom'
+
 
 function App() {
 
@@ -13,9 +15,11 @@ function App() {
           <div >
             <ul className='itemNav'>
               <li>
+                <Link to="/Adotepet">
                 <button>
                   <a href="">Adote</a>
                 </button>
+                </Link>
               </li>
               <li>
                 <button>
@@ -63,6 +67,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
+
+
     </>
   )
 }
