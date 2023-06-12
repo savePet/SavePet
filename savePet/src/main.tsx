@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
 /*import { AdotePet } from './pages/adotePet/AdotePet.tsx'
 import { HeaderAdote } from './components/headerAdote/HeaderAdote.tsx'
 import { FooterAdote } from './components/footerAdote/FooterAdote.tsx'*/
@@ -23,9 +22,9 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router} />
   </React.StrictMode>,
-)
+);
     /*<HeaderAdote />
-    <AdotePet />
-    <FooterAdote />*/
+<AdotePet />
+<FooterAdote />*/

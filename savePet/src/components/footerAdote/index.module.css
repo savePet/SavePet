@@ -15,7 +15,7 @@
 
 }
 
-.contado{
+.contato{
     position: absolute;
     margin-bottom: 256px;
 
@@ -23,11 +23,11 @@
     height: 60px;
 
     background: #E6AD4A;
-    box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.699);
     
 }
 
-.contadoh{
+.contatoh{
     text-align: center;
     margin-top: 10px;
 }
