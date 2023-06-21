@@ -7,6 +7,7 @@ import { HeaderAdote } from './components/headerAdote/HeaderAdote.tsx'
 import { FooterAdote } from './components/footerAdote/FooterAdote.tsx'*/
 import App from './pages/home/App.tsx';
 import Adotepet from './routes/AdotePet.tsx';
+import Homeadm from './routes/HomeAdm.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/AdotePet",
     element: <Adotepet />,
+  }, 
+  {
+    path: "/HomeAdm", 
+    element: <Homeadm />,
   }
 ])
 
