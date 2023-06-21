@@ -1,0 +1,99 @@
+.view {
+    background-image: url(../../assets/fundoLogin.png);
+    background-size: cover;
+    height: 100vh;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 60%;
+}
+
+.logo {
+    width: 250px;
+    height: 250px;
+}
+
+.credentials h1 {
+    color: #5B5B5B;
+    font-style: normal;
+    font-size: 50px;
+    margin-bottom: 8%;
+}
+
+.credentials {
+    display: flex;
+    font-family: 'Lato';
+    background-color: #ffff;
+    height: 75%;
+    width: 40%;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+label {
+    font-size: 15px;
+    color: #5B5B5B;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.pssw {
+    color: #7E7E7E;
+    font-size: 15px;
+    font-family: Lato;
+    margin-top: 15%;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #5B5B5B;
+    margin-bottom: 5%;
+    padding: 2%;
+    font-size: 15px;
+    color: #5B5B5B;
+}
+
+.p {
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: 12px;
+    color: #1F7BF4;
+}
+
+.info h1 {
+    color: #002D4C;
+    font-size: 30px;
+    font-family: Lato;
+    font-weight: 700;
+    margin-bottom: 20%;
+}
+
+.info {
+    background: linear-gradient(142.32deg, rgba(255, 253, 253, 0.6) 18.07%, rgba(255, 255, 255, 0.1) 97.39%);
+    box-shadow: 0px 4px 25px rgba(140, 140, 140, 0.25);
+    backdrop-filter: blur(5px);
+    border-radius: 0px 10px 10px 0px;
+    height: 75%;
+    width: 35%;
+
+
+    color: #000;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    text-align: center;
+    font-size: 17px;
+    font-family: Lato;
+    padding: 8%;
+}

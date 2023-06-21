@@ -1,0 +1,15 @@
+.sectio{
+    background-color:#002D4C;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+    height: 45px;
+    color: #ffff;
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size: 12px;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-radius: 5px;
+}
