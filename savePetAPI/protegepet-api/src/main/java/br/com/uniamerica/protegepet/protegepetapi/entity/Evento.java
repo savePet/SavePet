@@ -56,4 +56,15 @@ public class Evento extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipoEvento", nullable = false)
     private TipoEvento tipoEvento;
+
+     public Evento(String nome, String descricao, String endereco, LocalDate dataInicio, LocalDate dataTermino, LocalTime horarioInicio, LocalTime horarioTermino, TipoEvento tipoEvento) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.endereco = endereco;
+        this.dataInicio = dataInicio;
+        this.dataTermino = dataTermino;
+        this.horarioInicio = horarioInicio;
+        this.horarioTermino = horarioTermino;
+        this.tipoEvento = tipoEvento;
+    }
 }

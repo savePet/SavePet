@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -61,4 +63,16 @@ public class Protetora extends AbstractEntity {
     @OneToMany
     @JoinColumn(name = "id_ocorrencia")
     private List<Ocorrencia> ocorrencias;
+
+      public Protetora(String nome, String senha, String endereco, String telefone, String email, DisponibilidadeAcolhimento disponibilidadeAcolhimento, StatusCadastro statusCadastro, List<Animal> animals, List<Ocorrencia> ocorrencias) {
+        this.nome = nome;
+        this.senha = senha;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.email = email;
+        this.disponibilidadeAcolhimento = disponibilidadeAcolhimento;
+        this.statusCadastro = statusCadastro;
+        this.animals = new ArrayList<>();
+        this.ocorrencias = new ArrayList<>();
+    }
 }

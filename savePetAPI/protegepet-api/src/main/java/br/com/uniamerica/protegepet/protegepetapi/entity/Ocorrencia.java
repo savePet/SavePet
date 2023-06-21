@@ -31,4 +31,11 @@ public class Ocorrencia extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "statusOcorrencia", nullable = false)
     private StatusOcorrencia statusOcorrencia;
+
+     public Ocorrencia(String nomeUsuario, String regiao, String descricao, StatusOcorrencia statusOcorrencia) {
+        this.nomeUsuario = nomeUsuario;
+        this.regiao = regiao;
+        this.descricao = descricao;
+        this.statusOcorrencia = statusOcorrencia;
+    }
 }

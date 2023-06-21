@@ -1,6 +1,7 @@
 package br.com.uniamerica.protegepet.protegepetapi.service;
 
 import br.com.uniamerica.protegepet.protegepetapi.entity.Fornecedor;
+import br.com.uniamerica.protegepet.protegepetapi.entity.Servico;
 import br.com.uniamerica.protegepet.protegepetapi.repository.FornecedorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,6 +36,13 @@ public class FornecedorService {
         } else {
             throw new RuntimeException("Id não encontrado");
         }
+    }
+
+    @Transactional
+    public void VincularServicoFornecedor(Long idFornecedor, Servico servico) {// Vincula um servico com um fornecedor
+        Fornecedor fornecedor = this.fornecedorRepository.findById(idFornecedor).orElseThrow(() -> new RuntimeException("Fornecedor não encontrada"));
+        fornecedor.getServicos().add(servico);
+        this.fornecedorRepository.save(fornecedor);
     }
 
     @Transactional
