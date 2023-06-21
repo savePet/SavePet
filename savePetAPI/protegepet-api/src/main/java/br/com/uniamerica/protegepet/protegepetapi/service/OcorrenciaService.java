@@ -34,6 +34,20 @@ public class OcorrenciaService {
         return this.ocorrenciaRepository.save(ocorrencia);
     }
 
+    public void validarCadastroOcorrencia(String nomeUsuario, String regiao, String descricao, StatusOcorrencia statusOcorrencia) {
+        if (nomeUsuario == null && regiao == null && descricao == null && statusOcorrencia == null) {
+            throw new RuntimeException("Preencha os campos corretamente por favor");
+        } else if (statusOcorrencia != null || nomeUsuario.length() > 20 || regiao.length() > 50 || descricao.length() > 255) {
+            throw new RuntimeException("Somente a protetora pode decidir o staus da ocorrencia");
+        }
+        if (!(nomeUsuario instanceof String) || !(regiao instanceof String) || !(descricao instanceof String) || !(statusOcorrencia instanceof StatusOcorrencia)) {
+            throw new RuntimeException("Insira os valores corretamente por favor");
+        } else {
+            System.out.println("Dados corretos");
+        }
+}
+
+
     @Transactional
     public void atualizarObjeto(final Long id, final Ocorrencia ocorrencia) {
         if (id.equals(ocorrencia.getId()) && !this.ocorrenciaRepository.findById(id).isEmpty()) {
