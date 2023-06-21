@@ -52,4 +52,14 @@ public class Animal extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "statusSaude", nullable = false)
     private StatusSaude statusSaude;
+
+     public Animal(Especie especie, Raca raca, Genero genero, String descricao, PorteFisico porteFisico, Cor cor, StatusSaude statusSaude) {
+        this.especie = especie;
+        this.raca = raca;
+        this.genero = genero;
+        this.descricao = descricao;
+        this.porteFisico = porteFisico;
+        this.cor = cor;
+        this.statusSaude = statusSaude;
+    }
 }

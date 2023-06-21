@@ -4,6 +4,8 @@ import br.com.uniamerica.protegepet.protegepetapi.entity.Ocorrencia;
 import br.com.uniamerica.protegepet.protegepetapi.entity.StatusOcorrencia;
 import br.com.uniamerica.protegepet.protegepetapi.repository.OcorrenciaRepository;
 import br.com.uniamerica.protegepet.protegepetapi.service.OcorrenciaService;
+import io.swagger.annotations.ApiOperation;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -20,17 +22,19 @@ public class OcorrenciaController {
     @Autowired
     public OcorrenciaService ocorrenciaService;
 
-
+    @ApiOperation(value="Retorna todas as ocorrencias")
     @GetMapping
     public ResponseEntity<?> findAll() {
         return ResponseEntity.ok().body(this.ocorrenciaService.findAll());
     }
 
+    @ApiOperation(value="Retorna as ocorrencias pendentes") 
     @GetMapping("/ocorrenciasPendentes")
     public ResponseEntity<?> findAllPendentes() {
         return ResponseEntity.ok().body(this.ocorrenciaRepository.findAllPendentes());
     }
 
+    @ApiOperation(value="Retorna uma ocorrencia pelo Id") 
     @GetMapping("/{id}")
     public ResponseEntity<Ocorrencia> findById(
             @PathVariable final Long id
@@ -38,6 +42,7 @@ public class OcorrenciaController {
         return ResponseEntity.ok().body(this.ocorrenciaService.findById(id));
     }
 
+    @ApiOperation(value="Cadastra uma ocorrencia")
     @PostMapping
     public ResponseEntity<?> cadastrar(@RequestBody final Ocorrencia ocorrencia) {
         ocorrencia.setStatusOcorrencia(StatusOcorrencia.PENDENTE);
@@ -45,6 +50,7 @@ public class OcorrenciaController {
         return ResponseEntity.ok().body("Registro cadastrado com sucesso");
     }
 
+    @ApiOperation(value="Atualiza as informações de um ocorrencia") 
     @PutMapping("/atualizarObjeto/{id}")
     public ResponseEntity<?> atualizarObjeto(
             @PathVariable final Long id,
@@ -58,6 +64,7 @@ public class OcorrenciaController {
         return ResponseEntity.ok().body("Registro atualizado com sucesso");
     }
 
+    @ApiOperation(value="Deleta uma ocorrencia")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deletarObjeto(
             @PathVariable final Long id
