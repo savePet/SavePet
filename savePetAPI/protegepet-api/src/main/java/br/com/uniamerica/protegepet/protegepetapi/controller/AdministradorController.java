@@ -3,6 +3,7 @@ package br.com.uniamerica.protegepet.protegepetapi.controller;
 import br.com.uniamerica.protegepet.protegepetapi.entity.Administrador;
 import br.com.uniamerica.protegepet.protegepetapi.entity.Evento;
 import br.com.uniamerica.protegepet.protegepetapi.entity.StatusCadastro;
+import br.com.uniamerica.protegepet.protegepetapi.repository.AdministradorRepository;
 import br.com.uniamerica.protegepet.protegepetapi.service.AdministradorService;
 import br.com.uniamerica.protegepet.protegepetapi.service.EventoService;
 import io.swagger.annotations.ApiOperation;
@@ -20,12 +21,27 @@ public class AdministradorController {
     public AdministradorService administradorService;
 
     @Autowired
+    public AdministradorRepository administradorRepository;
+
+    @Autowired
     public EventoService eventoService;
 
     @ApiOperation(value="Retorna todos os administradores") 
     @GetMapping
     public ResponseEntity<?> findAll() {
         return ResponseEntity.ok().body(this.administradorService.findAll());
+    }
+
+    @ApiOperation(value="Retorna os administradores com cadastro em pendencia")
+    @GetMapping("/administradoresPendentes")
+    public ResponseEntity<?> findAllAdministradoresPendentes() {
+        return ResponseEntity.ok().body(this.administradorRepository.findAllAdministradoresPendentes());
+    }
+
+    @ApiOperation(value="Retorna os administradores com cadastro aceito")
+    @GetMapping("/administradoresAceitos")
+    public ResponseEntity<?> findAllAdministradoresAceitos() {
+        return ResponseEntity.ok().body(this.administradorRepository.findAllAdministradoresAceitos());
     }
 
     @ApiOperation(value="Retorna um administrador pelo Id") 
