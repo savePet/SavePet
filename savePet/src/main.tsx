@@ -8,6 +8,9 @@ import { FooterAdote } from './components/footerAdote/FooterAdote.tsx'*/
 import App from './pages/home/App.tsx';
 import Adotepet from './routes/AdotePet.tsx';
 import Homeadm from './routes/HomeAdm.tsx';
+
+import Listarservico from './routes/ListarServico.tsx';
+import { MenuProvider } from './contexts/menuAdm.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -20,15 +23,21 @@ const router = createBrowserRouter([
     element: <Adotepet />,
   }, 
   {
-    path: "/HomeAdm", 
+    path: "HomeAdm", 
     element: <Homeadm />,
-  }
+  },
+  {
+    path: "ServiçoAdm", 
+    element: <Listarservico />,
+  },
 ])
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <MenuProvider>
+      <RouterProvider router={router}/>
+    </MenuProvider>
   </React.StrictMode>,
 )
     /*<HeaderAdote />

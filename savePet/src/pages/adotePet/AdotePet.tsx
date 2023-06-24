@@ -25,7 +25,6 @@ import styles from './index.module.css'
 }*/
 export const AdotePet = () => {
 
-
     return(
         <section className={styles.section_container}>
             <div className={styles.select_container}>
