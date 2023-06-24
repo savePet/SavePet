@@ -3,9 +3,9 @@ import { MenuAdm } from '../../components/menuAdm/MenuAdm'
 import styles from './index.module.css'
 
 export const HomeAdm = () => {
-    return(        
+    return(
         <section className={styles.section_container}>
-            <div className={styles.Menu}>
+            <div>
                 <MenuAdm />
             </div>
             <div className={styles.home}>
@@ -14,7 +14,7 @@ export const HomeAdm = () => {
                         <span className={styles.relatorio_span}>Ocorrencias aceitas</span>
                         <span className={styles.relatorio_span}>Ocorrencias pendentes</span>
                         <span className={styles.relatorio_span}>Pet recolhidos</span>
-                    </div>                     
+                    </div>                    
                     <div className={styles.tabela}>   
                         <table>
                             <tr>
@@ -41,28 +41,18 @@ export const HomeAdm = () => {
                                 <span className={styles.ocorrencia_icone}>
                                     <Dog size={32}/>
                                     <Cat size={32}/>
-                                </span>
+                                </span>                               
                                 <div className={styles.descricao_container}>
                                     <span className={styles.ocorrencia_card}>Ocorrencia
                                     <span className={styles.relatorio_regiao}>Regiao</span>
                                     </span>                      
                                     <p className={styles.descricao}>Report on sales datagfhdg</p>
-                                </div>
+                                </div>                               
                                 <p className={styles.descricao_data}>1.5.2022 12:45</p>
                             </div>
                         </div>
                 </div>
             </div>
-        </section>
+        </section>          
     )
 }
-
-
-
-
-
-
-
-
-
-
