@@ -21,7 +21,7 @@ export const ListarProtetorAdm = () => {
             <div>
                 <MenuAdm />
             </div>
-            <div className={styles.pet}>
+            <div className={styles.protetoradm}>
                 <div className={styles.tabela}>   
                     <table>
                         <tr>

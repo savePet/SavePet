@@ -73,12 +73,11 @@ export const MenuAdm = () => {
                         {isMenuOpen && (<span className={styles.opcao}>Protetor</span>)}
                     </Link>
                 </li>
-                <li title="Fornecedor" className={location.pathname === 'Fornecedor' ? styles.active : ''}>
-                    <a href="#">      
-                    <Truck size={32}/>
-                    {isMenuOpen && (<span className={styles.opcao}>Fornecedor</span>)}
-                        
-                    </a>
+                <li title="Fornecedor" className={location.pathname === '/ListarFornecedorAdm' ? styles.active : ''}>
+                    <Link to="/ListarFornecedorAdm">           
+                        <Truck size={32}/>
+                        {isMenuOpen && (<span className={styles.opcao}>Fornecedor</span>)}
+                    </Link>
                 </li>
                 <li title="Ocorrencias" className={location.pathname === 'Ocorrencias' ? styles.active : ''}>
                     <a href="#">      

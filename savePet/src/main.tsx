@@ -13,6 +13,7 @@ import Listarservico from './routes/ListarServico.tsx';
 import { MenuProvider } from './contexts/menuAdm.tsx';
 import Listarpet from './routes/ListarPetAdm.tsx';
 import Listarprotetor from './routes/ListarProtetorAdm.tsx';
+import Listarfornecedor from './routes/ListarFornecedorAdm.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/ListarProtetorAdm",
     element: <Listarprotetor />,
+  },
+  {
+    path: "/ListarFornecedorAdm",
+    element: <Listarfornecedor />,
   }
 ])
 
