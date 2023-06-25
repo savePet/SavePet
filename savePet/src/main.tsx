@@ -12,6 +12,7 @@ import Homeadm from './routes/HomeAdm.tsx';
 import Listarservico from './routes/ListarServico.tsx';
 import { MenuProvider } from './contexts/menuAdm.tsx';
 import Listarpet from './routes/ListarPetAdm.tsx';
+import Listarprotetor from './routes/ListarProtetorAdm.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "/ListarPetAdm",
     element: <Listarpet />,
+  },
+  {
+    path: "/ListarProtetorAdm",
+    element: <Listarprotetor />,
   }
 ])
 

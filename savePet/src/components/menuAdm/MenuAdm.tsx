@@ -67,12 +67,11 @@ export const MenuAdm = () => {
                         {isMenuOpen && (<span className={styles.opcao}>Pet</span>)}
                     </Link>
                 </li>
-                <li title="Protetor" className={location.pathname === 'Protetor' ? styles.active : ''}>
-                    <a href="#"> 
+                <li title="Protetor" className={location.pathname === '/ListarProtetorAdm' ? styles.active : ''}>
+                    <Link to="/ListarProtetorAdm">
                         <Shield size={32}/>     
                         {isMenuOpen && (<span className={styles.opcao}>Protetor</span>)}
-                        
-                    </a>
+                    </Link>
                 </li>
                 <li title="Fornecedor" className={location.pathname === 'Fornecedor' ? styles.active : ''}>
                     <a href="#">      
