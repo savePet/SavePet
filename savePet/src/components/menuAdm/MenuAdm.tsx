@@ -79,12 +79,11 @@ export const MenuAdm = () => {
                         {isMenuOpen && (<span className={styles.opcao}>Fornecedor</span>)}
                     </Link>
                 </li>
-                <li title="Ocorrencias" className={location.pathname === 'Ocorrencias' ? styles.active : ''}>
-                    <a href="#">      
+                <li title="Ocorrencias" className={location.pathname === '/ListarOcorrenciaAdm' ? styles.active : ''}>
+                    <Link to="/ListarOcorrenciaAdm">
                         <NewspaperClipping size={32}/>
                         {isMenuOpen && (<span className={styles.opcao}>Ocorrencias</span>)}
-                        
-                    </a>
+                    </Link>
                 </li>
                 <li title="Confirmar Cadastros" className={location.pathname === 'Confirmar Cadastros' ? styles.active : ''}>
                     <a href="#">      
