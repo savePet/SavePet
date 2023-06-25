@@ -7,6 +7,7 @@ import React from 'react';
 
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 import { Button, Input, Space } from 'antd';
+import { Link } from 'react-router-dom';
 
 
 export const Login = () => {
@@ -32,7 +33,7 @@ export const Login = () => {
                         icon=''
                         link=''
                     />
-                    <p className={styles.pssw}>Não tem uma conta? <a href="" style={{ color: '#1F7BF4' }}>Cadastre-se</a></p>
+                    <p className={styles.pssw}>Não tem uma conta? <Link to='/Count'> <a href="" style={{ color: '#1F7BF4' }}> Cadastre-se </a></Link></p>
                 </div>
                 <div className={styles.info}>
                     <h1>Animal Save</h1>
@@ -40,7 +41,7 @@ export const Login = () => {
                         Nós da Animal Save somos bons em organização e
                         arrecadação de recursos. <br /> Nosso objetivo é prestar ajuda qualificada a quem já ajuda os animais.
                     </h3>
-                    <p className={styles.pssw}><a href="" style={{ color: '#1F7BF4', fontWeight: 'bold' }}> Saiba mais </a></p>
+                    <p className={styles.pssw}><a href="" style={{ color: '#1F7BF4', fontWeight: 'bold' }}>Saiba mais </a> </p>
                 </div>
             </section>
         </main >

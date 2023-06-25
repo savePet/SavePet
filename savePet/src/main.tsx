@@ -7,6 +7,7 @@ import { FooterAdote } from './components/footerAdote/FooterAdote.tsx'*/
 import App from './pages/home/App.tsx';
 import Adotepet from './routes/AdotePet.tsx';
 import { Login } from './pages/Login/Login.tsx';
+import { Count } from './pages/Crenditals/RegisterAcount/Count.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/Login",
     element: <Login />
+  },
+  {
+    path: "/Count",
+    element: <Count />
   }
 ])
 
