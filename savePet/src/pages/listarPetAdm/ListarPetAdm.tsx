@@ -17,7 +17,7 @@ export const ListarPetAdm = () => {
         setIsOpen(false)
     }
     return (
-        <section className={styles.section_container} id="ServiçoAdm">
+        <section className={styles.section_container}>
             <div>
                 <MenuAdm />
             </div>
