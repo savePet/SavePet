@@ -11,6 +11,7 @@ import Homeadm from './routes/HomeAdm.tsx';
 
 import Listarservico from './routes/ListarServico.tsx';
 import { MenuProvider } from './contexts/menuAdm.tsx';
+import Listarpet from './routes/ListarPetAdm.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -23,13 +24,17 @@ const router = createBrowserRouter([
     element: <Adotepet />,
   }, 
   {
-    path: "HomeAdm", 
+    path: "/HomeAdm", 
     element: <Homeadm />,
   },
   {
-    path: "ServiçoAdm", 
+    path: "/ServiçoAdm", 
     element: <Listarservico />,
   },
+  {
+    path: "/ListarPetAdm",
+    element: <Listarpet />,
+  }
 ])
 
 
