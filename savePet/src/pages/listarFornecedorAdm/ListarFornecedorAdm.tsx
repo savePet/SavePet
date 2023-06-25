@@ -1,12 +1,12 @@
 import { Scroll } from "@phosphor-icons/react"
-import styles from "../listarProtetor/index.module.css"
+import styles from "../listarFornecedorAdm/index.module.css"
 import { MenuAdm } from "../../components/menuAdm/MenuAdm"
 
 import Modal from 'react-modal'
 import { useState } from 'react'
 import close1 from '../../assets/close1.svg'
 
-export const ListarProtetorAdm = () => {
+export const ListarFornecedorAdm = () => {
     const [modalIsOpen, setIsOpen] = useState(false)
 
     const handleOpenModel = () => {
@@ -21,22 +21,26 @@ export const ListarProtetorAdm = () => {
             <div>
                 <MenuAdm />
             </div>
-            <div className={styles.protetoradm}>
+            <div className={styles.fornecedoradm}>
                 <div className={styles.tabela}>   
                     <table>
                         <tr>
                             <th>ID</th>
                             <th>NOME</th>
+                            <th>CNPJ</th>
+                            <th>ENDEREÇO</th>
+                            <th>CONTATO</th>
+                            <th>TIPOFORNECEDOR</th>
                             <th>STATUSCADASTRO</th>
-                            <th>DISPONIBILIDADEACOLHIMENTO</th>
-                            <th>CANTATO</th>
                         </tr>
                         <tr>
                             <td >1</td>
-                            <td>Edie</td>
-                            <td className={styles.statusProtetor}>Aceito</td>
-                            <td>segunda a sexta</td>
+                            <td>Leopold</td>
+                            <td>XX. XXX. XXX/0001-XX</td>
+                            <td>rua A</td>
                             <td>example@gmail.com</td>
+                            <td>Produto</td>
+                            <td className={styles.statusFornecedor}>Aceito</td>
                             <td><Scroll size={32} onClick={handleOpenModel} cursor="pointer"/></td>
                         </tr>
                     </table>
@@ -50,13 +54,17 @@ export const ListarProtetorAdm = () => {
                 </div>
                 <div className={styles.modal_container}>
                     <div className={styles.descricaoModal}>
-                        <p className={styles.tituloModal}>Protetor</p>
+                        <p className={styles.tituloModal}>Fornecedor</p>
                         <div className={styles.descricao}>
                             <p className={styles.infoModal}>ID:</p>
                             <p className={styles.descricao_info}>Not entered</p>
                         </div>
                         <div className={styles.descricao}>
                             <p className={styles.infoModal}>Nome:</p> 
+                            <p className={styles.descricao_info}>Not entered</p>
+                        </div>
+                        <div className={styles.descricao}>
+                            <p className={styles.infoModal}>Cnpj:</p>
                             <p className={styles.descricao_info}>Not entered</p>
                         </div>
                         <div className={styles.descricao}>
@@ -72,11 +80,11 @@ export const ListarProtetorAdm = () => {
                             <p className={styles.descricao_info}>Not entered</p>
                         </div>
                         <div className={styles.descricao}>
-                            <p className={styles.infoModal}>Disponibilidade de Acolhimento:</p>
+                            <p className={styles.infoModal}>StatusCadastro:</p>
                             <p className={styles.descricao_info}>Not entered</p>
                         </div>
                         <div className={styles.descricao}>
-                            <p className={styles.infoModal}>Status Cadastro:</p>
+                            <p className={styles.infoModal}>TipoFornecedor:</p>
                             <p className={styles.descricao_info}>Not entered</p>
                         </div>
                     </div>

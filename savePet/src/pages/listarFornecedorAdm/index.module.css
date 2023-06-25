@@ -9,7 +9,7 @@
     background: linear-gradient(180deg, #B6CD7B 0%, rgba(91, 121, 16, 0.95) 100%);;
 }
 
-.protetoradm{
+.fornecedoradm{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,7 +55,7 @@ tr:nth-child(even) {
     background-color: #85858567;
 }
 
-.statusProtetor{
+.statusFornecedor{
     color: #1BB876;
 }
 
