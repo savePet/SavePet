@@ -9,21 +9,19 @@ interface BtnProps {
     // color: string;
 }
 
-const ButtonNxt: React.FC<BtnProps> = ({ title, link }) => {
+const ButtonNxt: React.FC<BtnProps> = ({ title, link,icon }) => {
     const cardStyles = {
         title: title,
         backgroundImage: `url({icon})`,
     };
 
     return (
-        <section style={cardStyles} className={styles.sectio2} >
-            <a href={"/" + link} >
+            <a href={"/" + link} style={cardStyles} className={styles.sectio} >
                 <h2>{title}</h2>
-                {/* <img src={icon} alt="" /> */}
+                <img src={icon} alt="" />
                 <Link to={link}></Link>
-                {/* <ArrowRight size={10} color="#fff" weight="light" /> */}
+                <ArrowRight size={30} color="#fff" weight="light" />
             </a >
-        </section>
     )
 }
 export default ButtonNxt;

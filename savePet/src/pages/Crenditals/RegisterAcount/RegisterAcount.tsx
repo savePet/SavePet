@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom'
+import adm from '../../../assets/adm.svg'
+import fornecedor from '../../../assets/fornecedor1.svg'
+import house from '../../../assets/house-light.svg'
 import ButtonNxt from '../../../components/Button/Button'
 import CardType from '../../../components/CardType/CardType'
 import styles from './index.module.css'
-
-
-import house from '../../../assets/house-light.svg'
-import { Link } from 'react-router-dom'
 
 export const RegisterCount = () => {
     return (
@@ -24,20 +24,21 @@ export const RegisterCount = () => {
             <div className={styles.type}>
                 <CardType
                     icon={house}
-                    title='Protetora' link={'Auth'} cont='Você ficara responsavel por abrigar temporariamente nossos amiguinhos de 4 patas que não tem lar. '
+                    title='Protetora' link={'ProtectorP1'} iconName="house" cont='Você será encarregado de manter os nossos amigos de quatro patas em abrigo temporário. '
                 />
                 <CardType
-                    title='Forncededor' link={''} cont={'Será o responsavel pelo fornecimento de, desde rações a assistencia medica e entre outros.'}
+                    icon={fornecedor}
+                    title='Forncededor' link={'FornCreden'} cont={'A empresa será responsável pelo fornecimento de produtos, desde alimentos até assistência médica.'}
                 />
                 <CardType
-                    title='Administrador' link={''} cont={'Será o responsavel pelo conteudo do site e aprovação de novos cadastros de fornecedores e protetores.'}
+                    icon={adm}
+                    title='Administrador' link={'AdmInfo'} cont={'Será o responsável pelo conteúdo do site e pelo registro de novos fornecedores e protetores.'}
                 />
             </div>
             <div className={styles.footer}>
                 <p>
-                    *Todas as novas requisições de<br></br> cadastros estão sujeitas a analise e<br></br> verificação do administrador
+                    *Todas as novas requisições de<br></br> cadastros estão sujeitas a análise e<br></br> verificação do administrador
                 </p>
-                {/* <a href=""><Link to="/Login"> Voltar</Link></a> */}
                 <div className={styles.btns}>
                     <ButtonNxt
                         title="Próximo"

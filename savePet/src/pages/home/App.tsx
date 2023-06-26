@@ -3,7 +3,7 @@ import logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
 import { FooterAdote } from '../../components/footerAdote/FooterAdote'
 import { GridHome } from '../../components/gridHome'
-import  {About}  from '../../components/About/About'
+import { About } from '../../components/About/About'
 
 
 function App() {
@@ -29,15 +29,15 @@ function App() {
                 </button>
               </li>
               <li>
-                <button style={{ backgroundColor: "#63A7dc" }}>
+                <button style={{ backgroundColor: "#306992" }}>
                   <a href="">CONTATO</a>
                 </button>
               </li>
               <li>
                 <Link to="/Login">
-                <button style={{ backgroundColor: "#E6AD4A" }}>
-                  <a href="">LOGIN</a>
-                </button>
+                  <button style={{ backgroundColor: "#E6AD4A" }}>
+                    <a href="">LOGIN</a>
+                  </button>
                 </Link>
               </li>
             </ul>
@@ -52,7 +52,7 @@ function App() {
       </section>
       <GridHome />
       <About />
-      {/* <FooterAdote /> */}
+      <FooterAdote />
     </>
   )
 }

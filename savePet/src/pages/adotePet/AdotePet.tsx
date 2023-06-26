@@ -31,7 +31,7 @@ export const AdotePet = () => {
             <div className={styles.select_container}>
                 <h1 className={styles.text}><span className={styles.textSpan}>Encontre</span> seu <span className={styles.textSpan}>Pet</span> <br/></h1>
                 <div>
-                    <select  name="raca" placeholder='Raça'>
+                    <select className={styles.select} name="raca" placeholder='Raça'>
                         <option></option>
                     </select>
                     <select name="Cor" placeholder='Cor'></select>

@@ -1,11 +1,14 @@
 .sectio{
+    /* display: flex;
+    flex-direction: row; */
+
     background-color:#002D4C;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 50%;
-    height: 45px;
+    height: 50px;
     color: #ffff;
     font-family: 'Lato';
     font-weight: 100;
@@ -18,23 +21,4 @@
     width: 40px;
     height: 460px;
     margin-right: 10px;
-}
-
-.sectio2{
-    /* display: flex;
-    flex-direction: row; */
-
-    background-color:#002D4C;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 50px;
-    color: #ffff;
-    font-family: 'Lato';
-    font-weight: 100;
-    font-size: 12px;
-    padding-left: 20px;
-    border-radius: 5px;
 }

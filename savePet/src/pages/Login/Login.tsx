@@ -33,7 +33,7 @@ export const Login = () => {
                         icon=''
                         link=''
                     />
-                    <p className={styles.pssw}>Não tem uma conta? <Link to='/Count'> <a href="" style={{ color: '#1F7BF4' }}> Cadastre-se </a></Link></p>
+                    <p className={styles.pssw}>Não tem uma conta? <Link to='/Auth'> <a href="" style={{ color: '#1F7BF4' }}> Cadastre-se </a></Link></p>
                 </div>
                 <div className={styles.info}>
                     <h1>Animal Save</h1>

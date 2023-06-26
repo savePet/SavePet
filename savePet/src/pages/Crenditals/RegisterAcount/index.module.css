@@ -8,6 +8,7 @@
 
 .info {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
     width: 30%;
@@ -32,7 +33,7 @@
 
 .type {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
 }
 

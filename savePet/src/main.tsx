@@ -1,17 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-/*import { AdotePet } from './pages/adotePet/AdotePet.tsx'
-import { HeaderAdote } from './components/headerAdote/HeaderAdote.tsx'
-import { FooterAdote } from './components/footerAdote/FooterAdote.tsx'*/
 import App from './pages/home/App.tsx';
 import Adotepet from './routes/AdotePet.tsx';
 import { Login } from './pages/Login/Login.tsx';
-import { RegisterCount } from './pages/Crenditals/RegisterAcount/RegisterAcount.tsx';
 import { Error } from './pages/Error404/Error.tsx';
-import {RegisterAuth} from './pages/Crenditals/RegisterAuth/RegisterAuth.tsx';
 import Auth from './routes/Auth.tsx';
 import Acount from './routes/Acount.tsx';
+import ProtectorP1 from './routes/ProtectorP1.tsx';
+import ProtectorP2 from './routes/ProtectorP2.tsx';
+import Confirmation from './routes/Confirmation.tsx';
+import AdmInfo1 from './routes/AdmP1.tsx';
+import FornCreden from './routes/FornCreden.tsx';
+import FornInfo from './routes/FornInfo.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -35,13 +36,37 @@ const router = createBrowserRouter([
   {
     path: "/Auth",
     element: <Auth />
+  },
+  {
+    path: "/ProtectorP1",
+    element: <ProtectorP1 />
+  },
+  {
+    path: "/ProtectorP2",
+    element: <ProtectorP2 />
+  },
+  {
+    path: '/Confirmation',
+    element: <Confirmation />
+  },
+  {
+    path: '/AdmInfo',
+    element: <AdmInfo1 />
+  },
+  {
+    path: '/FornCreden',
+    element: <FornCreden />
+  },
+  {
+    path: '/FornInfo',
+    element: <FornInfo />
   }
 ])
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 );
     /*<HeaderAdote />
