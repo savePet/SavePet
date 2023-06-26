@@ -7,13 +7,18 @@ import { FooterAdote } from './components/footerAdote/FooterAdote.tsx'*/
 import App from './pages/home/App.tsx';
 import Adotepet from './routes/AdotePet.tsx';
 import { Login } from './pages/Login/Login.tsx';
-import { Count } from './pages/Crenditals/RegisterAcount/Count.tsx';
+import { RegisterCount } from './pages/Crenditals/RegisterAcount/RegisterAcount.tsx';
+import { Error } from './pages/Error404/Error.tsx';
+import {RegisterAuth} from './pages/Crenditals/RegisterAuth/RegisterAuth.tsx';
+import Auth from './routes/Auth.tsx';
+import Acount from './routes/Acount.tsx';
 // import './index.css'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error />
   },
   {
     path: "/AdotePet",
@@ -25,7 +30,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/Count",
-    element: <Count />
+    element: <Acount />
+  },
+  {
+    path: "/Auth",
+    element: <Auth />
   }
 ])
 
