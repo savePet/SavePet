@@ -5,7 +5,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_fornecedores", schema = "animalsave")
@@ -50,12 +52,25 @@ public class Fornecedor extends AbstractEntity {
 
     @Getter
     @Setter
-    @Column(name = "preco", nullable = false)
-    private BigDecimal preco;
+    @JoinColumn(name = "id_servicos")
+    @OneToMany
+    private List<Servico> servicos;
 
     @Getter
     @Setter
     @Enumerated(EnumType.STRING)
     @Column(name = "statusCadastro", nullable = false)
     private StatusCadastro statusCadastro;
+
+    public Fornecedor(String nome,  String senha,  String endereco, String cnpj, String telefone, String email, TipoFornecedor tipoFornecedor, List<Servico> servicos, StatusCadastro statusCadastro) {
+        this.nome = nome;
+        this.senha = senha;
+        this.endereco = endereco;
+        this.cnpj = cnpj;
+        this.telefone = telefone;
+        this.email = email;
+        this.tipoFornecedor = tipoFornecedor;
+        this.servicos = new ArrayList<>();
+        this.statusCadastro = statusCadastro;
+    }
 }

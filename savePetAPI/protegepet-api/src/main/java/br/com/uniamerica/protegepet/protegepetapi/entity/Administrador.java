@@ -5,6 +5,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -44,4 +46,13 @@ public class Administrador extends AbstractEntity {
     @OneToMany
     @JoinColumn(name = "id_evento")
     private List<Evento> eventos;
+
+     public Administrador(String nome, String email, String senha, String telefone, StatusCadastro statusCadastro, List<Evento> eventos) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+        this.telefone = telefone;
+        this.statusCadastro = statusCadastro;
+        this.eventos = new ArrayList<>();
+    }
 }

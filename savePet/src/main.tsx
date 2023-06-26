@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import App from './pages/home/App.tsx';
 import Adotepet from './routes/AdotePet.tsx';
+
 import { Login } from './pages/Login/Login.tsx';
 import { Error } from './pages/Error404/Error.tsx';
 import Auth from './routes/Auth.tsx';
@@ -13,6 +14,16 @@ import Confirmation from './routes/Confirmation.tsx';
 import AdmInfo1 from './routes/AdmP1.tsx';
 import FornCreden from './routes/FornCreden.tsx';
 import FornInfo from './routes/FornInfo.tsx';
+
+import Homeadm from './routes/HomeAdm.tsx';
+
+import Listarservico from './routes/ListarServico.tsx';
+import { MenuProvider } from './contexts/menuAdm.tsx';
+import Listarpet from './routes/ListarPetAdm.tsx';
+import Listarprotetor from './routes/ListarProtetorAdm.tsx';
+import Listarfornecedor from './routes/ListarFornecedorAdm.tsx';
+import Listarocorrencia from './routes/ListarOcorrenciaAdm.tsx';
+
 // import './index.css'
 
 const router = createBrowserRouter([
@@ -60,6 +71,32 @@ const router = createBrowserRouter([
   {
     path: '/FornInfo',
     element: <FornInfo />
+=======
+  }, 
+  {
+    path: "/HomeAdm", 
+    element: <Homeadm />,
+  },
+  {
+    path: "/ServiçoAdm", 
+    element: <Listarservico />,
+  },
+  {
+    path: "/ListarPetAdm",
+    element: <Listarpet />,
+  },
+  {
+    path: "/ListarProtetorAdm",
+    element: <Listarprotetor />,
+  },
+  {
+    path: "/ListarFornecedorAdm",
+    element: <Listarfornecedor />,
+  },
+  {
+    path: "/ListarOcorrenciaAdm",
+    element: <Listarocorrencia />,
+
   }
 ])
 
@@ -67,6 +104,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <MenuProvider>
+      <RouterProvider router={router}/>
+    </MenuProvider>
   </React.StrictMode>,
 );
     /*<HeaderAdote />

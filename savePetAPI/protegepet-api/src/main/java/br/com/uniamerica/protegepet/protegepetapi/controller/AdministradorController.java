@@ -3,8 +3,11 @@ package br.com.uniamerica.protegepet.protegepetapi.controller;
 import br.com.uniamerica.protegepet.protegepetapi.entity.Administrador;
 import br.com.uniamerica.protegepet.protegepetapi.entity.Evento;
 import br.com.uniamerica.protegepet.protegepetapi.entity.StatusCadastro;
+import br.com.uniamerica.protegepet.protegepetapi.repository.AdministradorRepository;
 import br.com.uniamerica.protegepet.protegepetapi.service.AdministradorService;
 import br.com.uniamerica.protegepet.protegepetapi.service.EventoService;
+import io.swagger.annotations.ApiOperation;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,13 +21,30 @@ public class AdministradorController {
     public AdministradorService administradorService;
 
     @Autowired
+    public AdministradorRepository administradorRepository;
+
+    @Autowired
     public EventoService eventoService;
 
+    @ApiOperation(value="Retorna todos os administradores") 
     @GetMapping
     public ResponseEntity<?> findAll() {
         return ResponseEntity.ok().body(this.administradorService.findAll());
     }
 
+    @ApiOperation(value="Retorna os administradores com cadastro em pendencia")
+    @GetMapping("/administradoresPendentes")
+    public ResponseEntity<?> findAllAdministradoresPendentes() {
+        return ResponseEntity.ok().body(this.administradorRepository.findAllAdministradoresPendentes());
+    }
+
+    @ApiOperation(value="Retorna os administradores com cadastro aceito")
+    @GetMapping("/administradoresAceitos")
+    public ResponseEntity<?> findAllAdministradoresAceitos() {
+        return ResponseEntity.ok().body(this.administradorRepository.findAllAdministradoresAceitos());
+    }
+
+    @ApiOperation(value="Retorna um administrador pelo Id") 
     @GetMapping("/{id}")
     public ResponseEntity<Administrador> findById(
             @PathVariable final Long id
@@ -32,6 +52,7 @@ public class AdministradorController {
         return ResponseEntity.ok().body(this.administradorService.findById(id));
     }
 
+    @ApiOperation(value="Cadastra um administrador") 
     @PostMapping
     public ResponseEntity<?> cadastrar(@RequestBody final Administrador administrador) {
         administrador.setStatusCadastro(StatusCadastro.PENDENTE);
@@ -39,6 +60,7 @@ public class AdministradorController {
         return ResponseEntity.ok().body("Registro cadastrado com sucesso");
     }
 
+    @ApiOperation(value="Cadastra um Evento ao administrador") 
     @PostMapping("/VincularEventoAdministrador/{idAdministrador}")
     public ResponseEntity<?> vincularEventoAdministrador(
             @PathVariable Long idAdministrador,
@@ -53,6 +75,7 @@ public class AdministradorController {
         return ResponseEntity.ok().body("Registro cadastrado com sucesso");
     }
 
+    @ApiOperation(value="Atualiza um informação do administrador")
     @PutMapping("/atualizarObjeto/{id}")
     public ResponseEntity<?> atualizarObjeto(
             @PathVariable final Long id,
@@ -66,6 +89,7 @@ public class AdministradorController {
         return ResponseEntity.ok().body("Registro atualizado com sucesso");
     }
 
+    @ApiOperation(value="Deleta um administrador")
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deletarObjeto(
             @PathVariable final Long id

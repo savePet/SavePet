@@ -17,7 +17,7 @@ public class DisponibilidadeAcolhimento extends AbstractEntity {
     @Getter
     @Setter
     @Column(name = "capacidadeAcolhimento", nullable = false)
-    private int capacidadeAcolhimento;
+    private Integer capacidadeAcolhimento;
 
     @Getter
     @Setter
@@ -27,35 +27,47 @@ public class DisponibilidadeAcolhimento extends AbstractEntity {
     @Getter
     @Setter
     @Column(name = "segunda", nullable = false)
-    private boolean segunda;
+    private Boolean segunda;
 
     @Getter
     @Setter
     @Column(name = "terca", nullable = false)
-    private boolean terca;
+    private Boolean terca;
 
     @Getter
     @Setter
     @Column(name = "quarta", nullable = false)
-    private boolean quarta;
+    private Boolean quarta;
 
     @Getter
     @Setter
     @Column(name = "quinta", nullable = false)
-    private boolean quinta;
+    private Boolean quinta;
 
     @Getter
     @Setter
     @Column(name = "sexta", nullable = false)
-    private boolean sexta;
+    private Boolean sexta;
 
     @Getter
     @Setter
     @Column(name = "sabado", nullable = false)
-    private boolean sabado;
+    private Boolean sabado;
 
     @Getter
     @Setter
     @Column(name = "domingo", nullable = false)
-    private boolean domingo;
+    private Boolean domingo;
+
+    public DisponibilidadeAcolhimento(Integer capacidadeAcolhimento, String horarioDisponivel, Boolean segunda, Boolean terca, Boolean quarta, Boolean quinta, Boolean sexta, Boolean sabado, Boolean domingo) {
+        this.capacidadeAcolhimento = capacidadeAcolhimento;
+        this.horarioDisponivel = horarioDisponivel;
+        this.segunda = segunda;
+        this.terca = terca;
+        this.quarta = quarta;
+        this.quinta = quinta;
+        this.sexta = sexta;
+        this.sabado = sabado;
+        this.domingo = domingo;
+    }
 }

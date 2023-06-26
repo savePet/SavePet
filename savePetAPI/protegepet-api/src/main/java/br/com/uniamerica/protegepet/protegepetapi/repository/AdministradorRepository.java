@@ -18,4 +18,10 @@ public interface AdministradorRepository extends JpaRepository<Administrador, Lo
 
     @Query("SELECT administrador FROM Administrador administrador WHERE administrador.ativo = true")
     public List<Administrador> findByAdministradoresAtivos();
+
+    @Query("SELECT administrador FROM Administrador administrador WHERE administrador.statusCadastro = 'PENDENTE'")
+    public List<Administrador> findAllAdministradoresPendentes();
+
+    @Query("SELECT administrador FROM Administrador administrador WHERE administrador.statusCadastro = 'ACEITO'")
+    public List<Administrador> findAllAdministradoresAceitos();
 }
