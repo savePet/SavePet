@@ -71,7 +71,6 @@ const router = createBrowserRouter([
   {
     path: '/FornInfo',
     element: <FornInfo />
-=======
   }, 
   {
     path: "/HomeAdm", 
@@ -103,7 +102,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
     <MenuProvider>
       <RouterProvider router={router}/>
     </MenuProvider>
