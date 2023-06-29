@@ -27,7 +27,7 @@ export const ProtectorP2 = () => {
             </div>
             <section className={styles.section}>
                 <div className={styles.login}>
-                    <p>Algum problema? <a href='' style={{ color: '#1F7BF4' }}><Link to="/Login">Contatar</Link></a></p>
+                    <p>Algum problema? <a href='' style={{ color: '#2E920A' }}><Link to="/Login">Contatar</Link></a></p>
                 </div>
                 <div className={styles.info}>
                     <div className={styles.enum}>

@@ -1,18 +1,56 @@
 .main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
+    flex-direction: row;
     height: 100vh;
 }
 
-.info {
+.lateral {
+    text-align: center;
+    width: 30%;
+    background-color: #ABC270;
+}
+
+.logo {
+    margin-top: 30px;
+    width: 70%;
+}
+
+.roadmap {
+    margin-top: 30%;
+    height: 20%;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #747474;
+    font-size: 20px;
+    font-family: Lato;
+}
+
+.item {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section {
+    width: 90%;
+}
+
+.info {
+    /* display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
-    height: 40%;
+    width: 80%;
+    height: 40%; */
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+    height: 60%;
 }
 
 .info h1 {
@@ -28,13 +66,24 @@
     font-size: 18px;
     font-family: Lato;
     font-weight: 700;
-    text-align: center;
+    /* text-align: center; */
 }
 
+.enum {
+    width: 100%;
+}
+
+.teste {
+    display: flex;
+    flex-direction: column;
+    margin-left: 17%;
+}
+
+
 .type {
+    margin-top: 10%;
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
 }
 
 .login {
@@ -65,4 +114,12 @@
 
 .btns {
     width: 30%;
+}
+
+.pLat {
+    margin-top: 70%;
+    color: #7E7E7E;
+    font-size: 18px;
+    font-family: Lato;
+    font-weight: 500;
 }

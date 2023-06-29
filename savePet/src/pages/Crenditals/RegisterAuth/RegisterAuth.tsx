@@ -15,7 +15,7 @@ export const RegisterAuth = () => {
             </div>
             <section className={styles.section}>
                 <div className={styles.login}>
-                    <p>Algum problema?<a href='' style={{ color: '#1F7BF4' }}><Link to="/Login"> Contatar</Link></a></p>
+                    <p>Algum problema?<a href='' style={{ color: '#2E920A' }}><Link to="/Login"> Contatar</Link></a></p>
                 </div>
                 <div className={styles.info}>
                     <div className={styles.enum}>
@@ -23,7 +23,7 @@ export const RegisterAuth = () => {
                             Seja um colaborador
                         </h1>
                         <p>
-                            Conclua o cadastro para poder ser um<br></br> dos nossos pareceiros
+                            Conclua o cadastro para poder ser um<br></br> dos nossos parceiros
                         </p>
                     </div>
                     <div className={styles.creden}>
