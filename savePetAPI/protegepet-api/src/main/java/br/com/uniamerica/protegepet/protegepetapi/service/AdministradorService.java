@@ -2,6 +2,7 @@ package br.com.uniamerica.protegepet.protegepetapi.service;
 
 import br.com.uniamerica.protegepet.protegepetapi.entity.Administrador;
 import br.com.uniamerica.protegepet.protegepetapi.entity.Evento;
+import br.com.uniamerica.protegepet.protegepetapi.entity.StatusCadastro;
 import br.com.uniamerica.protegepet.protegepetapi.repository.AdministradorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

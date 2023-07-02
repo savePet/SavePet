@@ -3,12 +3,13 @@ import styles from './index.module.css'
 
 interface CardPetProps {
     name?: string;
-    gen?: string;
+    genero?: string;
     raca?: string;
     idade?: string;
     color?: string;
     icon?: string;
     link: string;
+    especie?: string
 }
 function clicktoCard(link: string) {
     window.open("/" + link, "_self")
@@ -16,14 +17,15 @@ function clicktoCard(link: string) {
     console.log(link)
 }
 
-const CardPet: React.FC<CardPetProps> = ({ name, gen, raca, idade, link, color, icon }) => {
+const CardPet: React.FC<CardPetProps> = ({ name, genero, raca, idade, link, color, icon,especie }) => {
     const cardStyles = {
         backgroundColor: color,
-        g: gen,
+        g: genero,
         r: raca,
         i: idade,
         h1: name,
         icon: icon,
+        esp:especie
     };
     return (
         <section>
@@ -31,10 +33,11 @@ const CardPet: React.FC<CardPetProps> = ({ name, gen, raca, idade, link, color, 
                 <img src={icon} alt="icone" />
                 <div className={styles.contentC} >
                     <div>
-                        <h2>{name}({gen})</h2>
+                        <h2>{name}<p className={styles.pp}>({genero})</p></h2>
                         <p>{raca}</p>
                     </div>
-                    <p>{idade} anos</p>
+                    <p>{especie}</p>
+                    {/* <p>{idade} anos</p> */}
                 </div>
                 <Link to={link}></Link>
             </a>
