@@ -5,9 +5,9 @@ import { AdotePet } from "../pages/adotePet/AdotePet";
 function Adotepet(){
     return(
         <>
-            <HeaderAdote/>
+            {/* <HeaderAdote/> */}
                 <AdotePet/>
-            <FooterAdote />
+            {/* <FooterAdote /> */}
         </>
     )
 }

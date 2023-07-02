@@ -34,8 +34,7 @@ export const GridHome = () => {
                             link="Evento"
                         />
                     </div>
-                    <div>
-
+                    <div className={styles.doguinho}>
                     </div>
                 </div>
                 <div className={styles.grid}  >
@@ -64,6 +63,8 @@ export const GridHome = () => {
                         title='Clinicas Parceiras'
                         link=""
                     />
+                    <div className={styles.doguinho}>
+                    </div>
                 </div>
             </div>
         </section>
