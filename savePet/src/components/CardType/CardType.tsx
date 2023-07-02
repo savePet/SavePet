@@ -38,7 +38,7 @@ const CardType: React.FC<CardTypeProps> = ({ title, link, color, iconName, cont,
         <a href={"/" + link} style={cardStyles} className={styles.sectio}>
             {/* {renderIcon(iconName)} */}
             {/* {renderIcon(icon)} */}
-            <img src={icon} alt="icone"  style={{width:'100px'}}/>
+            <img src={icon} alt="icone"  style={{width:'70px'}}/>
             <h1>{title}</h1>
             <h3>{cont}</h3>
             <Link to={link}></Link>
