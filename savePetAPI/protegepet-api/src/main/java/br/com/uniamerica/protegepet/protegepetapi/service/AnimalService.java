@@ -24,8 +24,21 @@ public class AnimalService {
 
     @Transactional
     public Animal save(Animal animal) {
+        validarCadastroAnimal(animal.getEspecie(), animal.getRaca(), animal.getGenero(), animal.getDescricao(), animal.getPorteFisico(), animal.getCor(), animal.getStatusSaude());
         this.animalRepository.save(animal);
         return animal;
+    }
+
+    public void validarCadastroAnimal(Especie especie, Raca raca, Genero genero, String descricao, PorteFisico porteFisico, Cor cor, StatusSaude statusSaude) {
+        if (especie == null && raca == null && genero == null && descricao == null && porteFisico == null && cor == null && statusSaude == null) {
+            throw new RuntimeException("Preencha os campos corretamente por favor");
+        } else if (!(especie instanceof Enum<?>) || !(raca instanceof Enum<?>) || !(genero instanceof Enum<?>) || !(descricao instanceof String) || !(porteFisico instanceof Enum<?>) || !(cor instanceof Enum<?>) || !(statusSaude instanceof Enum<?>)) {
+            throw new RuntimeException("Preencha os campos de acordo com o tipo por facvor");
+        } else if (descricao.length() > 255) {
+            throw new RuntimeException("Limite de caracteres excedidos em descricao");
+        } else {
+            System.out.println("Dados corretos");
+        }
     }
 
     @Transactional
