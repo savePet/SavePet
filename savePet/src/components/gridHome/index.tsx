@@ -64,7 +64,6 @@ export const GridHome = () => {
                         link=""
                     />
                     <div className={styles.doguinho}>
-
                     </div>
                 </div>
             </div>
