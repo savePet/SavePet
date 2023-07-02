@@ -1,6 +1,6 @@
 package br.com.uniamerica.protegepet.protegepetapi.service;
 
-import br.com.uniamerica.protegepet.protegepetapi.entity.Animal;
+import br.com.uniamerica.protegepet.protegepetapi.entity.*;
 import br.com.uniamerica.protegepet.protegepetapi.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
