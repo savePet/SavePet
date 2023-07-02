@@ -1,46 +1,14 @@
-import { Link } from 'react-router-dom'
-import styles from './index.module.css'
-
+import { Divider } from 'antd'
+import Checkbox, { CheckboxChangeEvent } from 'antd/es/checkbox'
 import React, { useState } from 'react'
-
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logoAdotePet.svg'
 import ButtonNxt from '../../components/Button/Button'
-
-import { Space, type MenuProps } from 'antd';
-import Dropdown from 'antd/es/dropdown/dropdown'
-
-
-// const items: MenuProps['items'] = [
-//     {
-//         key: '1',
-//         label: (
-//             <p>Gato</p>
-//         ),
-//     },
-//     {
-//         key: '2',
-//         label: (
-//             <p>Cachorro</p>
-//         ),
-//     }
-// ];
-
-// const genero: MenuProps['items'] = [
-//     {
-//         key: '1',
-//         label: (
-//             <p>Gato</p>
-//         ),
-//     },
-//     {
-//         key: '2',
-//         label: (
-//             <p>Cachorro</p>
-//         ),
-//     }
-// ];
+import CardPet from '../../components/CardPet/CardPet'
+import styles from './index.module.css'
 
 
+import gatinho from '../../assets/gatinhoCard.png'
 const items = [
     {
         key: '1',
@@ -63,7 +31,9 @@ const genero = [
     },
 ];
 
-
+const onChange = (e: CheckboxChangeEvent) => {
+    console.log(`checked = ${e.target.checked}`);
+};
 
 /*const enum Raca {
     Viralata = 'Viralata',
@@ -88,7 +58,11 @@ const genero = [
 }*/
 export const AdotePet: React.FC = () => {
 
+    const [checked, setChecked] = useState(false);
 
+    const handleChange = (e: any) => {
+        setChecked(e.target.checked);
+    }
 
     return (
         <main className={styles.main}>
@@ -97,7 +71,140 @@ export const AdotePet: React.FC = () => {
                 <div className={styles.filter}>
                     <h1>Filtro</h1>
 
-                    <Dropdown menu={{ items: items }}>
+                    <p>Gênero</p>
+                    <Checkbox onChange={onChange}>Macho</Checkbox>
+                    <Checkbox onChange={onChange}>Fêmea</Checkbox>
+                    <Divider style={{ backgroundColor: '#fff', marginTop: '10px' }} />
+
+                    <p>Especie</p>
+                    <Checkbox checked={checked} onChange={handleChange} >Gato</Checkbox>
+                    <Checkbox >Cachorro</Checkbox>
+                    <Divider style={{ backgroundColor: '#fff', marginTop: '10px' }} />
+
+                    <p>Porte</p>
+                    <Checkbox onChange={onChange}>Pequeno</Checkbox>
+                    <Checkbox onChange={onChange}>Médio</Checkbox>
+                    <Checkbox onChange={onChange}>Grande</Checkbox>
+                    <Divider style={{ backgroundColor: '#fff', marginTop: '10px' }} />
+                </div>
+                <div className={styles.nav}>
+                    <a href="/" className={styles.a}>Voltar</a>
+                    <ButtonNxt
+                        title="Aplicar"
+                        icon=''
+                        link='ProtectorP2' />
+                </div>
+            </div>
+            <section className={styles.section}>
+                <div className={styles.login}>
+                    <p>Algum problema? <a href='' style={{ color: '#2E920A' }}><Link to="/Login">Contatar</Link></a></p>
+                </div>
+                <div className={styles.info}>
+                    <h1>Nossos pets</h1>
+
+                    <h3>
+                        Aqui se encontra a parte mais calorosa do nosso<br></br>projeto, no qual
+                        temos o prazer de apresentar <br></br>
+                        todos os nossos amiguinhos que <br></br>
+                        estão a procura de um lar.
+                    </h3>
+                </div>
+                <div className={styles.listPet}>
+                    <CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    />
+                    <CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    />
+                    <CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    />
+                    <CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    /><CardPet
+                        icon={gatinho}
+                        link=''
+                        gen='macho'
+                        idade='10'
+                        name='tetris'
+                        raca='show show'
+                    />
+                </div>
+            </section>
+        </main>
+    )
+}
+
+{/* <Dropdown menu={{ items: items }}>
                         <a onClick={(e) => e.preventDefault()} style={{
                             backgroundColor: '#fff',
                             marginTop: '20px',
@@ -130,31 +237,4 @@ export const AdotePet: React.FC = () => {
                                 <p>Selecione o gênero</p>
                             </Space>
                         </a>
-                    </Dropdown>
-                </div>
-                <div className={styles.nav}>
-                    <a href="/" className={styles.a}>voltar</a>
-                    <ButtonNxt
-                        title="Próximo"
-                        icon=''
-                        link='ProtectorP2' />
-                </div>
-            </div>
-            <section>
-                <div className={styles.login}>
-                    <p>Algum problema? <a href='' style={{ color: '#2E920A' }}><Link to="/Login">Contatar</Link></a></p>
-                </div>
-                <div>
-                    <h1>Nossos pets</h1>
-
-                    <h3>
-                        Aqui se encontra a parte mais calorosa do nosso<br></br>projeto, no qual
-                        temos o prazer de apresentar <br></br>
-                        todos os nossos amiguinhos que <br></br>
-                        estão a procura de um lar.
-                    </h3>
-                </div>
-            </section>
-        </main>
-    )
-}  
+                    </Dropdown> */}
