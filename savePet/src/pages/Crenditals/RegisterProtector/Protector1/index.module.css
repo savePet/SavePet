@@ -12,7 +12,7 @@
 
 .logo {
     margin-top: 30px;
-    width: 300px;
+    width: 70%;
 }
 
 .section {
@@ -57,13 +57,17 @@
 }
 
 .enum {
+    /* background-color: red; */
     display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .creden {
+    /* background-color: blue; */
     margin-top: 5%;
+    /* margin-left: 4%; */
     height: 65%;
     width: 50%;
     display: flex;

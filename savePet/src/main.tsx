@@ -1,30 +1,26 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import App from './pages/home/App.tsx';
-import Adotepet from './routes/AdotePet.tsx';
-
-import { Login } from './pages/Login/Login.tsx';
+import { MenuProvider } from './contexts/menuAdm.tsx';
 import { Error } from './pages/Error404/Error.tsx';
-import Auth from './routes/Auth.tsx';
+import { Login } from './pages/Login/Login.tsx';
+import App from './pages/home/App.tsx';
 import Acount from './routes/Acount.tsx';
-import ProtectorP1 from './routes/ProtectorP1.tsx';
-import ProtectorP2 from './routes/ProtectorP2.tsx';
-import Confirmation from './routes/Confirmation.tsx';
 import AdmInfo1 from './routes/AdmP1.tsx';
+import Adotepet from './routes/AdotePet.tsx';
+import Auth from './routes/Auth.tsx';
+import Confirmation from './routes/Confirmation.tsx';
 import FornCreden from './routes/FornCreden.tsx';
 import FornInfo from './routes/FornInfo.tsx';
-
 import Homeadm from './routes/HomeAdm.tsx';
-
-import Listarservico from './routes/ListarServico.tsx';
-import { MenuProvider } from './contexts/menuAdm.tsx';
-import Listarpet from './routes/ListarPetAdm.tsx';
-import Listarprotetor from './routes/ListarProtetorAdm.tsx';
 import Listarfornecedor from './routes/ListarFornecedorAdm.tsx';
 import Listarocorrencia from './routes/ListarOcorrenciaAdm.tsx';
+import Listarpet from './routes/ListarPetAdm.tsx';
+import Listarprotetor from './routes/ListarProtetorAdm.tsx';
+import Listarservico from './routes/ListarServico.tsx';
+import ProtectorP1 from './routes/ProtectorP1.tsx';
+import ProtectorP2 from './routes/ProtectorP2.tsx';
 
-// import './index.css'
 
 const router = createBrowserRouter([
   {

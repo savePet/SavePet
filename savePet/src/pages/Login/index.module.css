@@ -13,7 +13,7 @@
 .content {
     display: flex;
     justify-content: center;
-    height: 70%;
+    /* height: 70%; */
     width: 60%;
 }
 
@@ -26,14 +26,14 @@
     color: #5B5B5B;
     font-style: normal;
     font-size: 50px;
-    margin-bottom: 6%;
+    margin-bottom: 10px;
 }
 
 .credentials {
     display: flex;
     font-family: 'Lato';
     background-color: #ffff;
-    height: 75%;
+    height: max-content;
     width: 40%;
     border-radius: 10px 0px 0px 10px;
     display: flex;
@@ -65,10 +65,10 @@ input {
 }
 
 .p {
-    margin-top: 3%;
-    margin-bottom: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 12px;
-    color: #1F7BF4;
+    color: #2E920A;
 }
 
 .info h1 {
@@ -76,7 +76,7 @@ input {
     font-size: 30px;
     font-family: Lato;
     font-weight: 700;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 .info {
@@ -84,7 +84,7 @@ input {
     box-shadow: 0px 4px 25px rgba(140, 140, 140, 0.25);
     backdrop-filter: blur(5px);
     border-radius: 0px 10px 10px 0px;
-    height: 75%;
+    height: auto;
     width: 35%;
 
 
@@ -95,5 +95,5 @@ input {
     text-align: center;
     font-size: 17px;
     font-family: Lato;
-    padding: 8%;
+    padding: 5%;
 }

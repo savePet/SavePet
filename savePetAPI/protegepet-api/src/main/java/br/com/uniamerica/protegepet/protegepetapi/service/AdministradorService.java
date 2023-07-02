@@ -25,7 +25,20 @@ public class AdministradorService {
 
     @Transactional
     public Administrador save(Administrador administrador) {
+        validarCadastroAdministrador(administrador.getNome(), administrador.getEmail(), administrador.getSenha(), administrador.getTelefone(), administrador.getStatusCadastro(), administrador.getEventos());
         return this.administradorRepository.save(administrador);
+    }
+
+    public void validarCadastroAdministrador(String nome, String email, String senha, String telefone, StatusCadastro statusCadastro, List<Evento> eventos) {
+        if (nome == null && email == null && senha == null && telefone == null) {
+            throw new RuntimeException("Preencha os campos corretamente por favor");
+        } else if (!(nome instanceof String) || !(email instanceof String) || !(telefone instanceof String) || !(senha instanceof String)) {
+            throw new RuntimeException("Preencha os campos de acordo com o tipo por favor");
+        } else if (nome.length() > 30 || email.length() > 40 || senha.length() > 15 || telefone.length() > 9) {
+            throw new RuntimeException("Limite de caracteres excedido");
+        } else {
+            System.out.println("Dados corretos");
+        }
     }
 
     @Transactional
