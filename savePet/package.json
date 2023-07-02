@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cy:open": "npx cypress open"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.10",
@@ -18,12 +19,15 @@
     "react-router-dom": "^6.12.1"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "@types/mocha": "^10.0.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.2.6",
     "@types/react-modal": "^3.16.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "cypress": "^12.16.0",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
