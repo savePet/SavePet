@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2aaf321-c661-491b-8484-d258311f4134" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../savePet/src/pages/listarOcorrenciaAdm/ListarOcorrenciaAdm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/src/pages/listarOcorrenciaAdm/ListarOcorrenciaAdm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../savePet/src/pages/listarOcorrenciaAdm/index.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/src/pages/listarOcorrenciaAdm/index.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

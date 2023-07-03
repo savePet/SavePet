@@ -6,7 +6,9 @@
     align-items: center;
     
     margin: 0;
-    background: linear-gradient(180deg, #B6CD7B 0%, rgba(91, 121, 16, 0.95) 100%);;
+    background: linear-gradient(180deg, #B6CD7B 0%, rgba(91, 121, 16, 0.95) 100%);
+    
+ 
 }
 
 .ocorrencia{
@@ -17,6 +19,7 @@
   
   width: 100%;
   height: 100vh;
+  overflow: auto;
 }
 
 .relatorio_ocorrencia_container{
@@ -26,7 +29,7 @@
   min-height: 580px;
     
   background: #fff;
-  overflow-x: auto;
+  overflow: auto;
 }
   
 .ocorrencia_span{
@@ -227,7 +230,6 @@
     color: #000000;
     height: 200px;
     word-wrap: break-word;
-
 }
 
 .button_status{
@@ -253,7 +255,82 @@
 
 
 
+@media (max-width: 375px) {
 
+  .ocorrencia {
+    width: 100%;
+    overflow-x: auto;  
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  }
 
+.relatorio_ocorrencia_container{   
+  display: flex;
+  flex-direction: column;
 
+  min-width: 276px;
+  min-height: 580px;
+    
+  background: #fff;
+  overflow-x: auto;
+}
+.ocorrencia_card{
+  display: flex;
+  height: 100%;
+
+}
+
+.card_list{
+  width: auto;
+  height: 80px;
+
+  background: #F1F1F1;
+  border-radius: 5px;
+
+  margin-top: 10px;
+  margin-left: 80px;
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card_list:hover{
+  background: #dadada;
+  cursor: pointer;
+}
+
+.ocorrencia_icone{
+  display: flex;
+  align-items: center;
+
+  min-width: 60px;
+  height: 51px;
+
+  margin-top: 7px;
+
+  background: #99DFEE;
+  border-radius: 5px;
+}
+
+/*-----------MODAL-------------*/
+
+.cardModal_container{
+  width: 90%;
+  max-width: 523px;
+  min-height: 562px;
+  padding: 10px;
+       
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+          
+  background: #FFFFFF;
+  
+  border-radius: 5px;
+          
+}
+      
+}
 
