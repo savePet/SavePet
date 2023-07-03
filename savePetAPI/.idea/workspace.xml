@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2aaf321-c661-491b-8484-d258311f4134" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../savePet/src/pages/listarPetAdm/ListarPetAdm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/src/pages/listarPetAdm/ListarPetAdm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" afterDir="false" />
     </list>
@@ -42,13 +43,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Eduardo/Documents/Meus desenvolvimetos CODE/SavePet/savePetAPI"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eduardo/Documents/Meus desenvolvimetos CODE/SavePet/savePetAPI&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.ProtegepetApiApplication">
     <configuration name="ProtegepetApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.uniamerica.protegepet.protegepetapi.ProtegepetApiApplication" />
