@@ -81,6 +81,7 @@ public class ProtetoraTest {
         animal01.setPorteFisico(PorteFisico.PEQUENO);
         animal01.setCor(Cor.BRANCO);
         animal01.setStatusSaude(StatusSaude.EMTRATAMENTO);
+        animal01.setImagem(null);
         animals.add(animal01);
         animalsNullo = null;
     }
@@ -267,7 +268,7 @@ public class ProtetoraTest {
     @DisplayName("Deve retonar a quantidade de animals da protetora")
     public void testeRetornarQuantidadeAnimalsProtetora() {
         Protetora protetora02 = new Protetora();
-        Animal animal01 = new Animal(Especie.CACHORRO, Raca.BENGAL,Genero.MASCULINO, "defe", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.EMTRATAMENTO);
+        Animal animal01 = new Animal(Especie.CACHORRO, Raca.BENGAL,Genero.MASCULINO, "defe", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.EMTRATAMENTO, "");
         animals.add(animal01);
         protetora02.setAnimals(animals);
         Assertions.assertEquals(2, protetora02.getAnimals().size());

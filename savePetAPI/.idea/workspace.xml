@@ -5,13 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2aaf321-c661-491b-8484-d258311f4134" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../savePet/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/src/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../savePet/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../savePet/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../savePet/src/pages/adotePet/AdotePet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/src/pages/adotePet/AdotePet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../savePet/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../savePet/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/entity/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AdministradorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AdministradorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AnimalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/AnimalTest/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/AnimalTest/AnimalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/ProtetoraTest/ProtetoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/ProtetoraTest/ProtetoraTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -35,14 +53,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/ander/Desktop/SavePet/savePetAPI"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ander/Desktop/SavePet/savePetAPI&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Application.ProtegepetApiApplication">
     <configuration name="ProtegepetApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.uniamerica.protegepet.protegepetapi.ProtegepetApiApplication" />
       <module name="protegepet-api" />
@@ -56,9 +74,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AnimalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="protegepet-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.uniamerica.protegepet.protegepetapi.AnimalTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.uniamerica.protegepet.protegepetapi.AnimalTest" />
+      <option name="MAIN_CLASS_NAME" value="br.com.uniamerica.protegepet.protegepetapi.AnimalTest.AnimalTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProtegepetApiApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="protegepet-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.uniamerica.protegepet.protegepetapi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="br.com.uniamerica.protegepet.protegepetapi" />
+      <option name="MAIN_CLASS_NAME" value="br.com.uniamerica.protegepet.protegepetapi.ProtegepetApiApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ProtegepetApiApplication" />
+        <item itemvalue="JUnit.ProtegepetApiApplicationTests" />
+        <item itemvalue="JUnit.AnimalTest" />
       </list>
     </recent_temporary>
   </component>

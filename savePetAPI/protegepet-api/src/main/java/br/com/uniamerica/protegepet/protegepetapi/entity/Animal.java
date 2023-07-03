@@ -37,6 +37,11 @@ public class Animal extends AbstractEntity {
 
     @Getter
     @Setter
+    @Column(name = "imagem", nullable = false)
+    private String imagem;
+
+    @Getter
+    @Setter
     @Column(name = "porteFisico", nullable = false)
     @Enumerated(EnumType.STRING)
     private PorteFisico porteFisico;
@@ -53,7 +58,7 @@ public class Animal extends AbstractEntity {
     @Column(name = "statusSaude", nullable = false)
     private StatusSaude statusSaude;
 
-     public Animal(Especie especie, Raca raca, Genero genero, String descricao, PorteFisico porteFisico, Cor cor, StatusSaude statusSaude) {
+     public Animal(Especie especie, Raca raca, Genero genero, String descricao, PorteFisico porteFisico, Cor cor, StatusSaude statusSaude, String imagem) {
         this.especie = especie;
         this.raca = raca;
         this.genero = genero;
@@ -61,5 +66,6 @@ public class Animal extends AbstractEntity {
         this.porteFisico = porteFisico;
         this.cor = cor;
         this.statusSaude = statusSaude;
+        this.imagem = imagem;
     }
 }

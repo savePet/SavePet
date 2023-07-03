@@ -27,6 +27,8 @@ public class AnimalTest {
     private static StatusSaude statusSaude;
     private static StatusSaude statusSaudeNullo;
 
+    private static String imagem;
+
     //fim da definição
 
 
@@ -46,6 +48,7 @@ public class AnimalTest {
         cor = Cor.BRANCO;
         statusSaudeNullo = null;
         statusSaude = StatusSaude.EMTRATAMENTO;
+        imagem = null;
     }
 
     @BeforeEach
@@ -57,56 +60,56 @@ public class AnimalTest {
     @Test
     @DisplayName("Verifica se todos os campos estão nullos")
     public void VerificaCamposNullos() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especieNullo, racaNullo, generoNullo, descricaoNullo, porteFisicoNullo, corNullo, statusSaudeNullo));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especieNullo, racaNullo, generoNullo, descricaoNullo, porteFisicoNullo, corNullo, statusSaudeNullo, imagem));
     }
 
     @Test
     @DisplayName("Verifica se especie é diferente do tipo Enum")
     public void VerificaSeEspecieEDiferenteEnum() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especieNullo, raca, genero, descricao, porteFisico, cor, statusSaude));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especieNullo, raca, genero, descricao, porteFisico, cor, statusSaude, imagem));
     }
 
     @Test
     @DisplayName("Verifica se raca é diferente do tipo Enum")
     public void VerificaSeRacaEDiferenteEnum() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, racaNullo, genero, descricao, porteFisico, cor, statusSaude));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, racaNullo, genero, descricao, porteFisico, cor, statusSaude, imagem));
     }
 
     @Test
     @DisplayName("Verifica se genero é diferente do tipo Enum")
     public void VerificaSeGeneroEDiferenteEnum() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, generoNullo, descricao, porteFisico, cor, statusSaude));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, generoNullo, descricao, porteFisico, cor, statusSaude, imagem));
     }
 
     @Test
     @DisplayName("Verifica se descricao é diferente do tipo String")
     public void VerificaSeDescricaoEDiferenteString() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricaoNullo, porteFisico, cor, statusSaude));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricaoNullo, porteFisico, cor, statusSaude, imagem));
     }
 
     @Test
     @DisplayName("Verifica se porteFisico é diferente do tipo Enum")
     public void VerificaSePorteFisicoEDiferenteEnum() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisicoNullo, cor, statusSaude));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisicoNullo, cor, statusSaude, imagem));
     }
 
     @Test
     @DisplayName("Verifica se cor é diferente do tipo Enum")
     public void VerificaSeCorEDiferenteEnum() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisico, corNullo, statusSaude));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisico, corNullo, statusSaude, imagem));
     }
 
     @Test
     @DisplayName("Verifica se statusSaude é diferente do tipo Enum")
     public void VerificaSeStatusSaudeEDiferenteEnum() {
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisico, cor, statusSaudeNullo));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisico, cor, statusSaudeNullo, imagem));
     }
 
     @Test
     @DisplayName("Verifica se a quantidade de caracteres da descricao excedeu o limite")
     public void VerificaQuantidadeCaracteresDescricao() {
         descricao = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum ultricies aliquet. Donec porttitor turpis non odio porta, et feugiat sapien congue. Nullam ultrices vulputate magna, eu malesuada arcu luctus ac. Sed dignissim tellus ac dolor ultricies, a lacinia nunc hendrerit. Suspendisse eu diam sit amet tortor elementum fringilla at sed tortor. Cras ac feugiat justo, sit amet laoreet lorem. Mauris eget justo quis ligula vehicula semper. Nam at lacus non neque aliquet varius.";
-        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisico, cor, statusSaude));
+        Assertions.assertThrows(RuntimeException.class, () -> animalService.validarCadastroAnimal(especie, raca, genero, descricao, porteFisico, cor, statusSaude, imagem));
     }
 
     @Test
@@ -162,49 +165,49 @@ public class AnimalTest {
     @Test
     @DisplayName("Deve retonar a especie do animal")
     public void testeRetornarEspecieAnimal() {
-        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO);
+        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO, imagem);
         Assertions.assertEquals(Especie.CACHORRO, animal1.getEspecie());
     }
 
     @Test
     @DisplayName("Deve retonar a raca do animal")
     public void testeRetornarRacaAnimal() {
-        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO);
+        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO,  imagem);
         Assertions.assertEquals(Raca.BENGAL, animal1.getRaca());
     }
 
     @Test
     @DisplayName("Deve retonar o genero do animal")
     public void testeRetornarGeneroAnimal() {
-        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO);
+        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO, imagem);
         Assertions.assertEquals(Genero.MASCULINO, animal1.getGenero());
     }
 
     @Test
     @DisplayName("Deve retonar a descricao do animal")
     public void testeRetornarDescricaoAnimal() {
-        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO);
+        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO, imagem);
         Assertions.assertEquals("descricao", animal1.getDescricao());
     }
 
     @Test
     @DisplayName("Deve retonar o porteFisico do animal")
     public void testeRetornarPorteFisicoAnimal() {
-        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO);
+        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO, imagem);
         Assertions.assertEquals(PorteFisico.PEQUENO, animal1.getPorteFisico());
     }
 
     @Test
     @DisplayName("Deve retonar a cor do animal")
     public void testeRetornarCorAnimal() {
-        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO);
+        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO, imagem);
         Assertions.assertEquals(Cor.BRANCO, animal1.getCor());
     }
 
     @Test
     @DisplayName("Deve retonar o statusSaude do animal")
     public void testeRetornarStatusSaudeAnimal() {
-        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO);
+        Animal animal1 = new Animal(Especie.CACHORRO,Raca.BENGAL, Genero.MASCULINO, "descricao", PorteFisico.PEQUENO, Cor.BRANCO, StatusSaude.CRONICO, imagem);
         Assertions.assertEquals(StatusSaude.CRONICO, animal1.getStatusSaude());
     }
 }
