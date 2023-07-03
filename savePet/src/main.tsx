@@ -20,6 +20,7 @@ import Listarprotetor from './routes/ListarProtetorAdm.tsx';
 import Listarservico from './routes/ListarServico.tsx';
 import ProtectorP1 from './routes/ProtectorP1.tsx';
 import ProtectorP2 from './routes/ProtectorP2.tsx';
+import Modal from 'react-modal'
 
 
 const router = createBrowserRouter([
@@ -94,6 +95,7 @@ const router = createBrowserRouter([
 
   }
 ])
+Modal.setAppElement('#root');
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
