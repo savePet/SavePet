@@ -25,18 +25,18 @@ export const FornInfor = () => {
     return (
         <main className={styles.main}>
             <div className={styles.lateral}>
-                <img className={styles.logo} src={logo} alt="" />
+                <img className={styles.logo} src={logo} alt="logo" />
                 <div className={styles.roadmap}>
                     <div className={styles.item}>
-                        <CheckCircle size={32} color="#1f7bf4" weight="duotone" />
+                        <CheckCircle size={32} color="#1f7bf4" weight="duotone" data-testid="checkcircleicon"/>
                         <p>Tipo de colaboração</p>
                     </div>
                     <div className={styles.item}>
-                        <CheckCircle size={32} color="#1f7bf4" weight="duotone" />
+                        <CheckCircle size={32} color="#1f7bf4" weight="duotone" data-testid="Checkcircleicon"/>
                         <p >Informações</p>
                     </div>
                     <div className={styles.item}>
-                        <NumberCircleThree size={32} color="#1f7bf4" />
+                        <NumberCircleThree size={32} color="#1f7bf4" data-testid="numbercirclethreeicon"/>
                         <p style={{ color: '#1f7bf4' }}>Localização e Produto</p>
                     </div>
                 </div>
@@ -58,8 +58,8 @@ export const FornInfor = () => {
                         <Input className={styles.input} placeholder='Endereço' />
                         <div className={styles.hours}>
                             <p>Irei fornecer:</p>
-                            <Dropdown menu={{ items }}>
-                                <a onClick={(e) => e.preventDefault()} style={{
+                            <Dropdown data-testid="dropdown" menu={{ items }}>
+                                <a data-testid="click" onClick={(e) => e.preventDefault()} style={{
                                     marginTop: '20px',
                                     width: '250px',
                                     height: '50px',
@@ -69,7 +69,7 @@ export const FornInfor = () => {
                                     borderRadius: '5px',
                                     color: '#7E7E7E'
                                 }}>
-                                    <Space>
+                                    <Space data-testid="space">
                                         Selecione
                                     </Space>
                                 </a>
@@ -80,7 +80,7 @@ export const FornInfor = () => {
                             <ButtonNxt
                                 title="Próximo"
                                 icon=''
-                                link='Confirmation' />
+                                link='Confirmation' data-testid="componenttest"/>
                         </div>
                     </div>
                 </div>
