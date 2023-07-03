@@ -9,19 +9,19 @@ export const FornCredentials = () => {
     return (
         <main className={styles.main}>
             <div className={styles.lateral}>
-                <img className={styles.logo} src={logo} alt="" />
+                <img className={styles.logo} src={logo} alt="logoAdotePet" />
 
                 <div className={styles.roadmap}>
                     <div className={styles.item}>
-                        <CheckCircle size={32} color="#1f7bf4" weight="duotone" />
+                        <CheckCircle size={32} color="#1f7bf4" weight="duotone" data-testid="checkcircle-icon"/>
                         <p>Tipo de colaboração</p>
                     </div>
                     <div className={styles.item}>
-                        <NumberCircleTwo size={32} color="#1f7bf4" />
+                        <NumberCircleTwo size={32} color="#1f7bf4" data-testid="numbercircletwo-icon"/>
                         <p style={{ color: '#1f7bf4' }}>Informações</p>
                     </div>
                     <div className={styles.item}>
-                        <NumberCircleThree size={32} color="#1f7bf4" />
+                        <NumberCircleThree size={32} color="#1f7bf4" data-testid="numbercirclethree-icon"/>
                         <p>Localização e produto</p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ export const FornCredentials = () => {
                             <ButtonNxt
                                 title="Próximo"
                                 icon=''
-                                link='FornInfo' />
+                                link='FornInfo' data-testid="component-test"/>
                         </div>
                     </div>
                 </div>
