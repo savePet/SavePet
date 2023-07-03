@@ -1,6 +1,6 @@
 package br.com.uniamerica.protegepet.protegepetapi.service;
 
-import br.com.uniamerica.protegepet.protegepetapi.entity.Animal;
+import br.com.uniamerica.protegepet.protegepetapi.entity.*;
 import br.com.uniamerica.protegepet.protegepetapi.repository.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,12 +24,12 @@ public class AnimalService {
 
     @Transactional
     public Animal save(Animal animal) {
-        validarCadastroAnimal(animal.getEspecie(), animal.getRaca(), animal.getGenero(), animal.getDescricao(), animal.getPorteFisico(), animal.getCor(), animal.getStatusSaude());
+        validarCadastroAnimal(animal.getEspecie(), animal.getRaca(), animal.getGenero(), animal.getDescricao(), animal.getPorteFisico(), animal.getCor(), animal.getStatusSaude(), animal.getImagem());
         this.animalRepository.save(animal);
         return animal;
     }
 
-    public void validarCadastroAnimal(Especie especie, Raca raca, Genero genero, String descricao, PorteFisico porteFisico, Cor cor, StatusSaude statusSaude) {
+    public void validarCadastroAnimal(Especie especie, Raca raca, Genero genero, String descricao, PorteFisico porteFisico, Cor cor, StatusSaude statusSaude, String imagem) {
         if (especie == null && raca == null && genero == null && descricao == null && porteFisico == null && cor == null && statusSaude == null) {
             throw new RuntimeException("Preencha os campos corretamente por favor");
         } else if (!(especie instanceof Enum<?>) || !(raca instanceof Enum<?>) || !(genero instanceof Enum<?>) || !(descricao instanceof String) || !(porteFisico instanceof Enum<?>) || !(cor instanceof Enum<?>) || !(statusSaude instanceof Enum<?>)) {

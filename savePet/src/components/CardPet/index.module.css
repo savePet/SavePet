@@ -32,3 +32,10 @@
     flex-direction: row;
     align-items: center;
 }
+
+.pp{
+    color: #787878;
+    font-size: 15px;
+    font-family: Lato;
+    font-weight: 200;
+}
