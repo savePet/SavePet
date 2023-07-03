@@ -24,6 +24,7 @@
     height: 382px; 
     
     background: #fff;
+    overflow: auto;
 }
   
 table{
@@ -144,6 +145,56 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
+@media (max-width: 375px) {
 
+    .servico {
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    .tabela {
+      width: 95%;
+      margin: 0 auto;
+    }
+  
+    table {
+      min-width: 100%;
+      
+    }
+    table tr th{ 
+        
+        font-family: 'Noto Sans';
+        font-size: 10px;
+        font-weight: 400;
+        
+        color: rgba(0, 0, 0, 0.5);
+
+        padding-left: 2px;
+
+    }
+
+    td, th {
+        font-size: 5px;
+    }
+
+ /*-----------MODAL-------------*/
+
+    .cardModal_container{
+        width: 90%;
+        max-width: 523px;
+        min-height: 562px;
+        padding: 10px;
+         
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+            
+        background: #FFFFFF;
+    
+        border-radius: 5px;
+            
+    }
+        
+}
 
 
