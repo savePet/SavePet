@@ -1,0 +1,48 @@
+.section {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* height: 100vh; */
+}
+
+.logo {
+    width: 300px;
+    /* height: 50%; */
+    /* margin-top: 2%; */
+    margin-bottom: 2%;
+    /* padding: 3%; */
+}
+
+.title {
+    font-family: Lato;
+    color: #555;
+    font-size: 40px;
+    font-family: Lato;
+    font-weight: 600;
+}
+
+.cont {
+    color: #737373;
+    text-align: center;
+    font-size: 20px;
+    font-family: Lato;
+    font-weight: 600;
+    /* padding: 3%; */
+    margin-top: 1%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.number {
+    font-size: 300px;
+    font-family: Lato;
+    font-weight: 600;
+    color: #555;
+    /* padding: 3%; */
+}
