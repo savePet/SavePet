@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2aaf321-c661-491b-8484-d258311f4134" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../savePet/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../savePet/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../savePet/src/pages/adotePet/AdotePet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/src/pages/adotePet/AdotePet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../savePet/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../savePet/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../savePet/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protegepet-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/entity/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/entity/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AdministradorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AdministradorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AnimalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/java/br/com/uniamerica/protegepet/protegepetapi/service/AnimalService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/AnimalTest/AnimalTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/AnimalTest/AnimalTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/ProtetoraTest/ProtetoraTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/test/java/br/com/uniamerica/protegepet/protegepetapi/ProtetoraTest/ProtetoraTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/protegepet-api/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +42,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ander/Desktop/SavePet/savePetAPI&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Eduardo/Documents/Meus desenvolvimetos CODE/SavePet/savePetAPI"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.ProtegepetApiApplication">
     <configuration name="ProtegepetApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.uniamerica.protegepet.protegepetapi.ProtegepetApiApplication" />
